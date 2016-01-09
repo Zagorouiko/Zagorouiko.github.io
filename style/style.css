@@ -32,7 +32,7 @@
 
 body {
 	/*background: #151515;										/* Page background */
-	background-image: url(../images/background.png);
+	background-image: url(../images/background2.jpg);
 	color: #00D5CD;														/* Font color */
 	padding: 150px;													/* Padding between link blocks and edge */
 	font-family: "Museo", "Helvetica Neue", sans-serif;	/* Font */
@@ -42,7 +42,7 @@ body {
 
 a {
 	color: #00D5CD;														/* Link Color */
-	font-size: 23px;												/* Link Size */
+	font-size: 12px;												/* Link Size */
 	text-decoration: none;									/* Remove underlines */
 	font-weight: bold;
 	border-radius: 50px;
@@ -58,9 +58,8 @@ a:hover {
 	float: left;
 	padding: .8em;														/* Padding around link block */
 	width: 200px;														/* Link block width */
-	background: rgba(0, 0, 0, 0.7);
-	border-radius: 15px;
-
+	/*background: rgba(0, 0, 0, 0.6);*/
+	/*background: linear-gradient(to left, rgba(255,255,255,0), rgba(0,0,0,.5));*/
 }
 
 h1 {
@@ -96,7 +95,7 @@ li img {
 	top: .5%;
 	right: 5%;
 	font-size: 2em;
-	background: rgba(0, 0, 0, 0.7);
+	background: linear-gradient(to left, rgba(255,255,255,0), rgba(0,0,0,1));
 }
 
 form {
