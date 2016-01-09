@@ -31,33 +31,42 @@
 */
 
 body {
-	background: #151515;										/* Page background */
+	/*background: #151515;										/* Page background */
+	background-image: url(../images/background.png);
 	color: #00D5CD;														/* Font color */
 	padding: 150px;													/* Padding between link blocks and edge */
 	font-family: "Museo", "Helvetica Neue", sans-serif;	/* Font */
 	text-shadow: rgba(0,0,0,0.6) 1px 1px 0; /* Text Shadow */
+	font-family: orbitron;
 }
 
 a {
 	color: #00D5CD;														/* Link Color */
-	font-size: 11px;												/* Link Size */
+	font-size: 23px;												/* Link Size */
 	text-decoration: none;									/* Remove underlines */
+	font-weight: bold;
+	border-radius: 50px;
 }
 
 a:hover {
 	color: #ddd;														/* Link hover color */
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .block {
 	border-left: 1px solid #999;						/* Left border of link block */
 	float: left;
-	padding: 1em;														/* Padding around link block */
-	width: 160px;														/* Link block width */
+	padding: .8em;														/* Padding around link block */
+	width: 200px;														/* Link block width */
+	background: rgba(0, 0, 0, 0.0);
+	border-radius: 15px;
+
 }
 
 h1 {
 	margin: 0;
-	font-size: 1.5em;												/* Title size */
+	font-size: 2.2em;												/* Title size */
+	text-decoration: underline;
 }
 
 ul {
@@ -84,8 +93,8 @@ li img {
 
 #clock {
 	position: absolute;
-	bottom: 10px;
-	right: 10px;
+	top: .5%;
+	right: 5%;
 	font-size: 2em;
 }
 
