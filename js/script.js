@@ -8,7 +8,7 @@
 
 /**
 	Released under MIT License
-	
+
 	Copyright (c) 2010 Jukka Svahn, Christian Brassat
 	<http://rahforum.biz>
 	<http://crshd.cc>
@@ -19,10 +19,10 @@
 	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 	copies of the Software, and to permit persons to whom the Software is
 	furnished to do so, subject to the following conditions:
-	
+
 	The above copyright notice and this permission notice shall be included in
 	all copies or substantial portions of the Software.
-	
+
 	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -38,27 +38,20 @@ var settings = {
 	"navigation": {
 		"newWindow": true
 	},
-	
+
 	"search": {
 		"engines": [
 			["http://www.google.com/search", "q", "Google", "sg"],
-			["http://www.google.com/images", "q", "Google Images", "si"],
-			["http://search.yahoo.com/search", "p", "Yahoo", "sy"],
-			["http://wikipedia.org/w/index.php", "w", "Wikipedia", "sw"],
-			["http://www.dict.cc", "s", "dict.cc", "sd"],
-			["http://dict.leo.org", "search", "leo", "sl"],
-			["http://www.flickr.com/search", "q", "flickr", "sf"],
-			["http://browse.deviantart.com/", "q", "deviantArt", "sa"]
 		],
-		"focusSearch": false
+		"focusSearch": true
 	},
-	
+
 	"clock": {
 		"showClock": true
 	},
 
 	"animation": {
-		"hideLinks": true
+		"hideLinks": false
 	},
 
 	"icons": {
@@ -105,7 +98,7 @@ function searchBox(url, name, placeholder) {
 $(document).ready(function() {
 
 	var shortcuts = {};
-	
+
 	/*  Get Links  *\
 	\*=============*/
 	var linkString = $('body').text();
@@ -150,12 +143,12 @@ $(document).ready(function() {
 		var lineArray = line.split(" || ");
 		var url = lineArray[0];
 		var title = lineArray[1];
-		
+
 		var icon = "";
 		if (lineArray[3]) {
 			icon = lineArray[3];
 		}
-		
+
 		/*  Add to shortcuts array *\
 		\*=========================*/
 		if(lineArray[2]) {
@@ -166,7 +159,7 @@ $(document).ready(function() {
 		\*=====================================*/
 		var iconHtml = '';
 		if (settings.icons.showIcons && icon) {
-			iconHtml = '<img src="' + icon + '"/>'; 
+			iconHtml = '<img src="' + icon + '"/>';
 		}
 
 		/*  Add HTML code  *\
@@ -187,7 +180,7 @@ $(document).ready(function() {
 
 	/*  Animation Time!  *\
 	\*===================*/
-	
+
 	/*  Hide lists  *\
 	\*==============*/
 	if (settings.animation.hideLinks) {
@@ -232,7 +225,7 @@ $(document).ready(function() {
 		var searchDiv = document.getElementById ('searches');
 		$(searchDiv.firstChild.firstChild).focus();
 	}
- 
+
 	/*  Clock  *\
 	\*=========*/
 
@@ -251,7 +244,7 @@ $(document).ready(function() {
 	var typed = '';
 	var shortcutArray = Object.keys(shortcuts);
 	var typedDate = new Date();
-		
+
 	// Check if we typed a keybinding
 	function hasSubstring(element) {
 		var index = typed.indexOf(element);
@@ -274,7 +267,7 @@ $(document).ready(function() {
 		});
 		var nowDate = new Date();
 		var diffMs = (nowDate - typedDate);
-		if (diffMs > 1000) {	
+		if (diffMs > 1000) {
 			typed = String.fromCharCode(e.which);
 		} else {
 			typed = typed + String.fromCharCode(e.which);
