@@ -58,7 +58,7 @@ a:hover {
 	float: left;
 	padding: .8em;														/* Padding around link block */
 	width: 200px;														/* Link block width */
-	background: rgba(0, 0, 0, 0.0);
+	background: rgba(0, 0, 0, 0.7);
 	border-radius: 15px;
 
 }
